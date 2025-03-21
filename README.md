@@ -17,8 +17,10 @@ docker-compose up
 ## Submission
 Submit a zip file on Canvas. The directory and contents of the files to be submitted are as follows:
 
+```
 your_name/workspace/lab2/
   ├── answers.yaml
   ├── 1_single_pe_modeling.ipynb
   ├── 2_spatial_arch_modeling.ipynb
   ├── 3_mapspace_exploration.ipynb
+```
