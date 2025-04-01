@@ -43,7 +43,10 @@ compound_components:
       # ============================================================
       - name: {{address_generator_name}}
         actions:
-        - name: {{address_generator_action_for_write}}
+
+        # Initial
+        #- name: {{address_generator_action_for_write}}
+        - name: {{address_generator_action_for_read}}
           arguments: {} # None needed here!
 
     - &write_action # This anchor can be referenced later to
@@ -59,10 +62,15 @@ compound_components:
         # ============================================================
         # What action should the address generator perform for write?
         # ============================================================
-        - name: {{address_generator_name}}
-          actions:
-          - name: {{address_generator_action_for_write}}
-            arguments: {} # None needed here!
+        # Original
+        #- name: {{address_generator_name}}
+        #  actions:
+        #  - name: {{address_generator_action_for_write}}
+        #    arguments: {} # None needed here!
+      - name: {{address_generator_name}}
+        actions:
+        - name: {{address_generator_action_for_write}}
+          arguments: {} # None needed here!
 
     - name: update # Update action is the same as write action, so reference the anchor
       <<<: *write_action
